@@ -112,7 +112,7 @@ const anthropic_models = {
 }
 
 const OPENAI_KEY = import.meta.env.VITE_OPENAI_API_KEY
-const ANTHROPIC_KEY = import.meta.env.VITE_ANTHROPIC_API_KEY
+const ANTHROPIC_KEY = import.meta.env.VITE_OPENAI_API_KEY
 
 const claudeClient = new Client(ANTHROPIC_KEY, { apiUrl: '/claude' })
 // console.log(claudeClient)
