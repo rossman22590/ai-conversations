@@ -1,6 +1,6 @@
 # ai-discussion
 
-Vue 3 project 
+Vue app to make one AI chat to another AI
 
 # Add your OpenAI and Anthropic API keys in .env
 ```
