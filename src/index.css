@@ -1,0 +1,60 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    /* @apply bg-sky-600  text-white font-medium text-sm py-1 px-3 rounded-lg hover_bg-sky-500 */
+    @apply px-4 py-2 rounded-lg text-sm font-medium text-white bg-indigo-600 hover_bg-indigo-800  focus_outline-none focus_border-purple-200 transition-all shadow;
+  }
+  input.radio {
+    @apply w-4 h-4 text-indigo-600 bg-gray-100 border-gray-300 focus_ring-indigo-500;
+  }
+  label.radio {
+    @apply ml-2 text-sm font-medium text-gray-900;
+  }
+  .active {
+    /* @apply bg-indigo-900; */
+    @apply inline-flex items-center shadow text-white bg-indigo-500 hover_bg-indigo-400 transition ease-in-out duration-150;
+  }
+  textarea {
+    @apply block p-2 mb-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300;
+  }
+  label.textarea {
+    @apply block mb-2 text-sm font-medium text-gray-900;
+  }
+  
+  select {
+    @apply block p-1 mb-2 w-full text-xs text-gray-900 bg-gray-50 rounded-lg border border-gray-300;
+  }
+  
+  pre {
+    @apply block p-2 mb-2 w-full text-xs text-gray-100 bg-gray-800 rounded-lg border border-gray-900 shadow-xl;
+    font-family: 'Fira Code', monospace;
+    -webkit-font-smoothing: antialiased;
+    white-space: pre-wrap;
+  }
+  
+  .chat {
+    @apply py-2 flex;
+  }
+  .chat:not(.triggered) .inner {
+    width: 66%;
+    @apply bg-white ml-3 text-sm py-2 px-4 shadow rounded-xl font-normal leading-5;
+  }
+  .chat:nth-child(odd):not(.triggered) .inner {
+    /* @apply bg-indigo-600 text-white; */
+    @apply bg-gray-100;
+  }
+  .chat:nth-child(even) {
+    @apply flex-row-reverse;
+  }
+  .chat.triggered {
+    @apply w-full text-center text-xs text-gray-500;
+  }
+  
+  .chat.waiting .inner {
+    width: auto !important;
+  }
+}
